@@ -13,7 +13,6 @@ import java.util.List;
 public class UserServiceImp implements UserService {
     private final UserRepository userRepository;
 
-    @Autowired
     public UserServiceImp(UserRepository userRepository) {
         this.userRepository = userRepository;
     }

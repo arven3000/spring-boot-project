@@ -17,7 +17,6 @@ public class UserController {
 
     private final UserService userService;
 
-    @Autowired
     public UserController(UserService userService) {
         this.userService = userService;
     }
@@ -52,7 +51,7 @@ public class UserController {
         return "users/edit";
     }
 
-    @PatchMapping("/{id}")
+    @PutMapping("/{id}")
     private String edit(@Valid @ModelAttribute("user") User user,
                         BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
